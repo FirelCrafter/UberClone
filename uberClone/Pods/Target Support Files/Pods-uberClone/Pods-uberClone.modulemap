@@ -1,0 +1,6 @@
+framework module Pods_uberClone {
+  umbrella header "Pods-uberClone-umbrella.h"
+
+  export *
+  module * { export * }
+}
