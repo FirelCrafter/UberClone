@@ -151,8 +151,8 @@ class SignUpConroller: UIViewController {
     
     private func uploadUserDataAndDismiss(uid: String, values: [String:Any]) {
         USERS_REF.child(uid).updateChildValues(values) { (error, ref) in
-            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? HomeViewController else { return }
-            controller.configureUI()
+            guard let controller = UIApplication.shared.keyWindow?.rootViewController as? ContainerController else { return }
+            controller.configure()
             self.dismiss(animated: true, completion: nil)
         }
     }

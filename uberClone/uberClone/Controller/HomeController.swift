@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
     
     weak var delegate: HomeControllerDelegate?
     
-    private var user: User? {
+    var user: User? {
         didSet {
             locationInputView.user = user
             if user?.accountType == .passenger {
@@ -94,7 +94,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkIsUserLoggedIn()
+        configureUI()
         enableLocationServices()
         
     }
@@ -225,40 +225,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    //MARK: Shared API
-    
-    func checkIsUserLoggedIn() {
-        if Auth.auth().currentUser?.uid == nil {
-            DispatchQueue.main.async {
-                let nav = UINavigationController(rootViewController: LoginController())
-                self.present(nav, animated: true, completion: nil)
-            }
-        } else {
-            configure()
-        }
-    }
-    
-    func signOut() {
-        do {
-            try Auth.auth().signOut()
-        } catch {
-            print("Error signing Out!")
-        }
-    }
-    
-    func fetchUserData() {
-        guard let currentUid = Auth.auth().currentUser?.uid else { return }
-        Service.shared.fetchUserData(uid: currentUid) { user in
-            self.user = user
-        }
-    }
-    
     //MARK: Helper functions
-    
-    func configure() {
-        configureUI()
-        fetchUserData()
-    }
     
     fileprivate func configureActionButton(config: ActionButtonConfiguration) {
         switch config {
