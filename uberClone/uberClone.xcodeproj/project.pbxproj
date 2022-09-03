@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41E989A1126C204CC88AF104 /* Pods_uberClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69E58719C4199F3BF9CB3CB /* Pods_uberClone.framework */; };
 		741C826428263E0400B222AF /* PickupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C826328263E0400B222AF /* PickupController.swift */; };
+		74307A0F28C3216E005ED43E /* AddLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74307A0E28C3216E005ED43E /* AddLocationController.swift */; };
 		744C576127E0C82D00A83C13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744C576027E0C82D00A83C13 /* AppDelegate.swift */; };
 		744C576327E0C82D00A83C13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744C576227E0C82D00A83C13 /* SceneDelegate.swift */; };
 		744C576827E0C82D00A83C13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744C576627E0C82D00A83C13 /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 		747B84F32811DC8E00887045 /* RideActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747B84F22811DC8E00887045 /* RideActionView.swift */; };
 		7492B61127FAA31D005C8EDC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492B61027FAA31D005C8EDC /* Service.swift */; };
 		7492B61327FAAAC1005C8EDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492B61227FAAAC1005C8EDC /* User.swift */; };
+		74B4524A28C07F44002A95E1 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B4524928C07F44002A95E1 /* SettingsController.swift */; };
+		74B4524C28C08833002A95E1 /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B4524B28C08833002A95E1 /* UserInfoHeader.swift */; };
 		74B64F5328B736660079F1D4 /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B64F5228B736660079F1D4 /* MenuHeader.swift */; };
 		74B85CF728B4B1AB0003115B /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B85CF628B4B1AB0003115B /* MenuController.swift */; };
 		74B85CF928B4B1D00003115B /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B85CF828B4B1CF0003115B /* ContainerController.swift */; };
@@ -38,6 +41,7 @@
 		08AA7223942CD2136DA8A76E /* Pods-uberClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uberClone.debug.xcconfig"; path = "Target Support Files/Pods-uberClone/Pods-uberClone.debug.xcconfig"; sourceTree = "<group>"; };
 		573D3A5DA6D4C1E8E8D59333 /* Pods-uberClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uberClone.release.xcconfig"; path = "Target Support Files/Pods-uberClone/Pods-uberClone.release.xcconfig"; sourceTree = "<group>"; };
 		741C826328263E0400B222AF /* PickupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupController.swift; sourceTree = "<group>"; };
+		74307A0E28C3216E005ED43E /* AddLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationController.swift; sourceTree = "<group>"; };
 		744C575D27E0C82D00A83C13 /* uberClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uberClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		744C576027E0C82D00A83C13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		744C576227E0C82D00A83C13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		747B84F22811DC8E00887045 /* RideActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideActionView.swift; sourceTree = "<group>"; };
 		7492B61027FAA31D005C8EDC /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		7492B61227FAAAC1005C8EDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		74B4524928C07F44002A95E1 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		74B4524B28C08833002A95E1 /* UserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
 		74B64F5228B736660079F1D4 /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
 		74B85CF628B4B1AB0003115B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		74B85CF828B4B1CF0003115B /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
@@ -78,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74307A0D28C320EF005ED43E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				74B4524928C07F44002A95E1 /* SettingsController.swift */,
+				74307A0E28C3216E005ED43E /* AddLocationController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		744C575427E0C82C00A83C13 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +139,7 @@
 				7479EFE927F9AE3A00B0959F /* LocationCell.swift */,
 				747B84F22811DC8E00887045 /* RideActionView.swift */,
 				74B64F5228B736660079F1D4 /* MenuHeader.swift */,
+				74B4524B28C08833002A95E1 /* UserInfoHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +157,7 @@
 		744C577727E0C93500A83C13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				74307A0D28C320EF005ED43E /* Settings */,
 				74B85CF528B4B17E0003115B /* SideMenu */,
 				74B85CF428B4B1680003115B /* Authentication */,
 				74CB835A27E862B0002FE07F /* HomeController.swift */,
@@ -320,12 +337,15 @@
 				744C578B27E20BCC00A83C13 /* SignUpController.swift in Sources */,
 				7476021327E747C200C34129 /* AuthButton.swift in Sources */,
 				74CB835B27E862B0002FE07F /* HomeController.swift in Sources */,
+				74B4524C28C08833002A95E1 /* UserInfoHeader.swift in Sources */,
+				74B4524A28C07F44002A95E1 /* SettingsController.swift in Sources */,
 				7479EFE827F721D300B0959F /* LocationInputView.swift in Sources */,
 				74CA7A1528147C6C006FAB5B /* Trip.swift in Sources */,
 				741C826428263E0400B222AF /* PickupController.swift in Sources */,
 				7477DC1727FDF8BC00BCB0B2 /* DriverAnnotation.swift in Sources */,
 				744C577B27E0CA3C00A83C13 /* LoginController.swift in Sources */,
 				744C576127E0C82D00A83C13 /* AppDelegate.swift in Sources */,
+				74307A0F28C3216E005ED43E /* AddLocationController.swift in Sources */,
 				7477DC1527FDD92E00BCB0B2 /* LocationHfndler.swift in Sources */,
 				74B85CF728B4B1AB0003115B /* MenuController.swift in Sources */,
 				7479EFEA27F9AE3B00B0959F /* LocationCell.swift in Sources */,
