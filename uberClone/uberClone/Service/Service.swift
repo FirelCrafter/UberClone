@@ -14,6 +14,10 @@ let USERS_REF = DB_REF.child("users")
 let REF_DRIVER_LOCATIONS = DB_REF.child("driver-locations")
 let REF_TRIPS = DB_REF.child("trips")
 
+
+//MARK: DriverService
+
+
 struct DriverService {
     
     static let shared = DriverService()
@@ -55,6 +59,8 @@ struct DriverService {
         geoFire.setLocation(location, forKey: uid)
     }
 }
+
+//MARK: PassengerService
 
 struct PassengerService {
     
@@ -103,7 +109,15 @@ struct PassengerService {
         
         REF_TRIPS.child(uid).removeValue(completionBlock: completion)
     }
+    
+    func saveLocation(locationString: String, type: LocationType, completion: @escaping (Error?, DatabaseReference) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let key: String = type == .home ? "homeLocation" : "workLocation"
+        USERS_REF.child(uid).child(key).setValue(locationString, withCompletionBlock: completion)
+    }
 }
+
+//MARK: SharedService
 
 struct Service {
     

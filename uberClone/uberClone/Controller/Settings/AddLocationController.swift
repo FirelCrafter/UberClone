@@ -8,11 +8,16 @@
 import UIKit
 import MapKit
 
+protocol AddLocationControllerDelegate: AnyObject {
+    func updateLocation(locationString: String, type: LocationType)
+}
+
 class AddLocationController: UITableViewController {
     
     //MARK: Properties
     
     private let reuseIdentifier = "Cell"
+    weak var delegate: AddLocationControllerDelegate?
     private let searchBar = UISearchBar()
     private let searchCompleter = MKLocalSearchCompleter()
     private var searchResults = [MKLocalSearchCompletion]() {
@@ -77,6 +82,14 @@ extension AddLocationController {
         cell.textLabel?.text = result.title
         cell.detailTextLabel?.text = result.subtitle
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let result = searchResults[indexPath.row]
+        let title = result.title
+        let subtitle = result.subtitle
+        let locationString = title + " " + subtitle
+//        locationString.replacingOccurrences(of: ", Россия", with: "") // на тот случай, если нужно будет убрать страну из строки
+        delegate?.updateLocation(locationString: locationString, type: type)
     }
 }
 

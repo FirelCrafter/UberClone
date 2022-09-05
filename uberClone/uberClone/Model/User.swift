@@ -18,11 +18,22 @@ struct User {
     let email: String
     var accountType: AccountType!
     var location: CLLocation?
+    var homeLocation: String?
+    var workLocation: String?
     
     init(uid: String, dict: [String:Any]) {
         self.uid = uid
         self.fullname = dict["fullname"] as? String ?? ""
         self.email = dict["email"] as? String ?? ""
+        
+        
+        if let home = dict["homeLocation"] as? String {
+            self.homeLocation = home
+        }
+        
+        if let work = dict["workLocation"] as? String {
+            self.workLocation = work
+        }
         
         if let index = dict["accountType"] as? Int {
             self.accountType = AccountType(rawValue: index)

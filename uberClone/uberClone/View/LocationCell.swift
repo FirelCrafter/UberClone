@@ -19,12 +19,12 @@ class LocationCell: UITableViewCell {
         }
     }
     
-    var type: LocationType? {
-        didSet {
-            titleLabel.text = type?.description
-            addressLabel.text = type?.subtitle
-        }
-    }
+//    var type: LocationType? {
+//        didSet {
+//            titleLabel.text = type?.description
+//            addressLabel.text = type?.subtitle
+//        }
+//    }
     
     var titleLabel: UILabel = {
         let label = UILabel()
