@@ -8,15 +8,6 @@
 import UIKit
 import Firebase
 
-extension UIColor {
-    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
-        return UIColor.init(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
-    }
-    
-    static let backgroundColor = UIColor.rgb(red: 25, green: 25, blue: 25)
-    static let mainBlueTint = UIColor.rgb(red: 17, green: 154, blue: 237)
-}
-
 class LoginController: UIViewController {
     
     // MARK: Properties
@@ -66,7 +57,7 @@ class LoginController: UIViewController {
         attributedTitle.append(NSAttributedString(string: "Sign Up",
                                                   attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16),
                                                                NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
-        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        button.addTarget(LoginController.self, action: #selector(handleShowSignUp), for: .touchUpInside)
         button.setAttributedTitle(attributedTitle, for: .normal)
 
         return button

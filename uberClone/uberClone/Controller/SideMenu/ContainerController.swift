@@ -54,6 +54,8 @@ class ContainerController: UIViewController {
         if Auth.auth().currentUser?.uid == nil {
             DispatchQueue.main.async {
                 let nav = UINavigationController(rootViewController: LoginController())
+                nav.isModalInPresentation = true
+                nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: true, completion: nil)
             }
         } else {
@@ -73,6 +75,8 @@ class ContainerController: UIViewController {
             try Auth.auth().signOut()
             DispatchQueue.main.async {
                 let nav = UINavigationController(rootViewController: LoginController())
+                nav.isModalInPresentation = true
+                nav.modalPresentationStyle = .fullScreen 
                 self.present(nav, animated: true, completion: nil)
             }
         } catch {
